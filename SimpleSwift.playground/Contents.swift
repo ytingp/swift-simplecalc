@@ -3,7 +3,7 @@ import Foundation
 
 print("Welcome to the UW Calculator Playground")
 
-func calculate(_ args: [String]) -> Int {
+/*func calculate(_ args: [String]) -> Int {
     if args.last == "count" {
         return args.count - 1
     } else if args.last == "avg" {
@@ -268,11 +268,10 @@ calculate("2 - -2") == 4
 calculate("-2 / 2") == -1
 
 calculate("1 -2 3 -4 5 count") == 5
-
+*/
  
 // Implement calculate([String]) and calculate(String)
 // to use floating-point values
-
 func calculate(_ args: [String]) -> Double {
     let operand = args[1]
     switch operand {
@@ -296,9 +295,9 @@ func calculate(_ args: [String]) -> Double {
     }
 }
 
-func calculate(_ arg: String) -> Int {
+func calculate(_ arg: String) -> Double {
     let strArr = arg.split(separator: " ")
-    return strArr.count - 1
+    return Double(strArr.count) - 1.0
 }
 
 calculate(["2.0", "+", "2.0"]) == 4.0
